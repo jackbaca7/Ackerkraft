@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dy4ujofgjnqj6"]
+
+[node name="woker_skills" type="VBoxContainer"]
+custom_minimum_size = Vector2(238, 0)
+offset_right = 174.0
+offset_bottom = 23.0

@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://cckyut1rj4en2"]
+
+[ext_resource type="PackedScene" uid="uid://c0asg8cpmh7ve" path="res://Assets/Scenes/ui.tscn" id="1_truts"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_uigok"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="2_23mc3"]
+[ext_resource type="PackedScene" uid="uid://crviw77lc13ib" path="res://Assets/Scenes/map.tscn" id="2_81b75"]
+[ext_resource type="PackedScene" uid="uid://1rm887eeqq68" path="res://Assets/Scenes/worker.tscn" id="3_8ltl0"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_uigok")
+WorldScene = ExtResource("2_81b75")
+WorkerScene = ExtResource("3_8ltl0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+anchor_mode = 0
+script = ExtResource("2_23mc3")
+
+[node name="UI" parent="." instance=ExtResource("1_truts")]

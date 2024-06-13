@@ -1,0 +1,585 @@
+[gd_scene load_steps=23 format=3 uid="uid://c0asg8cpmh7ve"]
+
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_mh7c2"]
+[ext_resource type="PackedScene" uid="uid://473p2bf06ob8" path="res://Assets/Scenes/main_menu.tscn" id="2_7mwf7"]
+[ext_resource type="Script" path="res://Assets/Scenes/workerPanel.gd" id="3_i6u4p"]
+[ext_resource type="Texture2D" uid="uid://ccpcv5qfuox5a" path="res://Assets/anforderungen (1).png" id="3_jj56p"]
+[ext_resource type="PackedScene" uid="uid://bw126k5pste8m" path="res://woker_health.tscn" id="4_w7i6x"]
+[ext_resource type="PackedScene" uid="uid://dy4ujofgjnqj6" path="res://Assets/Scenes/worker_skills2.tscn" id="4_wppwa"]
+[ext_resource type="Texture2D" uid="uid://cg2kx2l23p1t8" path="res://Assets/buttonTexture/farm100.png" id="7_tca68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2odvq"]
+bg_color = Color(0.27451, 0.713726, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yp10o"]
+bg_color = Color(0.117647, 0.352941, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fm0gm"]
+bg_color = Color(0.690196, 0.713726, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b0blj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8nhs2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ij2pe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57f0g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qtd4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fbnow"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nt47q"]
+
+[sub_resource type="Theme" id="Theme_jvq3y"]
+Button/colors/icon_hover_color = Color(0, 0.611765, 0.615686, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_ij2pe")
+Button/styles/focus = SubResource("StyleBoxEmpty_57f0g")
+Button/styles/hover = SubResource("StyleBoxEmpty_qtd4m")
+Button/styles/normal = SubResource("StyleBoxEmpty_fbnow")
+Button/styles/pressed = SubResource("StyleBoxEmpty_nt47q")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hd7k1"]
+bg_color = Color(0.215686, 0.215686, 0.215686, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67uqh"]
+corner_radius_top_left = 37
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51nli"]
+bg_color = Color(0.976471, 0.87451, 0.564706, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.694118, 0.592157, 0.352941, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehfhk"]
+bg_color = Color(0.858824, 0.760784, 0.494118, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.858824, 0.760784, 0.494118, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_mh7c2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenu" parent="Control" instance=ExtResource("2_7mwf7")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="worker_selector" type="VBoxContainer" parent="Control"]
+unique_name_in_owner = true
+visible = false
+visibility_layer = 3
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 120.0
+offset_bottom = -395.0
+grow_vertical = 2
+mouse_default_cursor_shape = 7
+theme_override_constants/separation = 15
+
+[node name="worker_1_button" type="Button" parent="Control/worker_selector"]
+visibility_layer = 3
+custom_minimum_size = Vector2(0, 119)
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_2odvq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yp10o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fm0gm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b0blj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8nhs2")
+button_mask = 3
+text = "1"
+
+[node name="worker_2_button" type="Button" parent="Control/worker_selector"]
+visibility_layer = 3
+custom_minimum_size = Vector2(0, 119)
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_2odvq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yp10o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fm0gm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b0blj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8nhs2")
+button_mask = 3
+text = "2"
+
+[node name="worker_stats_view" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -264.0
+offset_top = -170.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 0
+alignment = 2
+
+[node name="messages_panel" type="Panel" parent="Control/worker_stats_view"]
+visible = false
+custom_minimum_size = Vector2(262.38, 123.265)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = SubResource("Theme_jvq3y")
+theme_override_styles/panel = SubResource("StyleBoxFlat_hd7k1")
+
+[node name="messages_label" type="Label" parent="Control/worker_stats_view/messages_panel"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MESSAGE NO"
+horizontal_alignment = 1
+
+[node name="worker_stats_panel" type="Panel" parent="Control/worker_stats_view"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 207.34)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/worker_stats_view/worker_stats_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer"]
+layout_mode = 2
+mouse_filter = 0
+
+[node name="worker_panel_label" type="Label" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Controll_skills" type="Control" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(127.15, 166.345)
+layout_mode = 2
+
+[node name="worker_scroll_container" type="ScrollContainer" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(185.425, 70.205)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="worker_scroll_control" type="Control" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(238, 160)
+layout_mode = 2
+
+[node name="worker_quests" type="VBoxContainer" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(238, 0)
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 172.0
+mouse_filter = 0
+
+[node name="quest_container1" type="HBoxContainer" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests"]
+unique_name_in_owner = true
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="quest_label1" type="Label" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests/quest_container1"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "
+"
+
+[node name="points_label1" type="Label" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests/quest_container1"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+horizontal_alignment = 2
+
+[node name="quest_container2" type="HBoxContainer" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests"]
+unique_name_in_owner = true
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="quest_label2" type="Label" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests/quest_container2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="points_label2" type="Label" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests/quest_container2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+horizontal_alignment = 2
+
+[node name="quest_container3" type="HBoxContainer" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests"]
+unique_name_in_owner = true
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="quest_label3" type="Label" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests/quest_container3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "
+"
+
+[node name="points_label3" type="Label" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control/worker_quests/quest_container3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "aaa"
+horizontal_alignment = 2
+
+[node name="worker_inventory" type="VBoxContainer" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(238, 0)
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 172.0
+mouse_filter = 0
+
+[node name="woker_skills" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control" instance=ExtResource("4_wppwa")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 266.0
+mouse_filter = 0
+
+[node name="worker_health" parent="Control/worker_stats_view/worker_stats_panel/MarginContainer/VBoxContainer/Controll_skills/worker_scroll_container/worker_scroll_control" instance=ExtResource("4_w7i6x")]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(238, 0)
+layout_mode = 0
+mouse_filter = 0
+
+[node name="worker_stats_button" type="Panel" parent="Control/worker_stats_view"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(261.64, 43.505)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme = SubResource("Theme_jvq3y")
+theme_override_styles/panel = SubResource("StyleBoxFlat_67uqh")
+script = ExtResource("3_i6u4p")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/worker_stats_view/worker_stats_button"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -20.0
+offset_right = 42.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/separation = 15
+
+[node name="aspirations_button" type="Button" parent="Control/worker_stats_view/worker_stats_button/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("3_jj56p")
+clip_text = true
+
+[node name="inventory_button" type="Button" parent="Control/worker_stats_view/worker_stats_button/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("3_jj56p")
+clip_text = true
+
+[node name="skills_button" type="Button" parent="Control/worker_stats_view/worker_stats_button/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("3_jj56p")
+clip_text = true
+
+[node name="needs_button" type="Button" parent="Control/worker_stats_view/worker_stats_button/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("3_jj56p")
+clip_text = true
+
+[node name="Area2D" type="Area2D" parent="Control/worker_stats_view"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/worker_stats_view/Area2D"]
+position = Vector2(0.150002, -0.143349)
+scale = Vector2(1.00189, 0.99867)
+polygon = PackedVector2Array(264, 5, 0, 5, 8, 381, 264, 381)
+
+[node name="bulding_select_control" type="Control" parent="Control"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -459.955
+offset_top = -176.47
+offset_right = 436.955
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="bulding_select_panel" type="Panel" parent="Control/bulding_select_control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_51nli")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/bulding_select_control/bulding_select_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 9
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer"]
+clip_contents = true
+layout_mode = 2
+mouse_filter = 0
+theme_override_constants/separation = -5
+
+[node name="farm_panel" type="Panel" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehfhk")
+
+[node name="farm_button" type="TextureButton" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/farm_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -42.5
+offset_right = 50.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_tca68")
+
+[node name="church_panel" type="Panel" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehfhk")
+
+[node name="church_button" type="TextureButton" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/church_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -42.5
+offset_right = 50.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_tca68")
+
+[node name="tabern_panel" type="Panel" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehfhk")
+
+[node name="tabern_button" type="TextureButton" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/tabern_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_tca68")
+
+[node name="market_panel" type="Panel" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehfhk")
+
+[node name="market_button" type="TextureButton" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/market_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_tca68")
+
+[node name="mill_panel" type="Panel" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehfhk")
+
+[node name="mill_button" type="TextureButton" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/mill_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_tca68")
+
+[node name="tower_panel" type="Panel" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehfhk")
+
+[node name="tower_button" type="TextureButton" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/tower_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_tca68")
+
+[node name="wood_house_panel" type="Panel" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehfhk")
+
+[node name="wood_house_button" type="TextureButton" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/wood_house_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_tca68")
+
+[node name="water_well_panel" type="Panel" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehfhk")
+
+[node name="water_well_button" type="TextureButton" parent="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/water_well_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_tca68")
+
+[connection signal="change_worker" from="." to="Control/worker_stats_view/worker_stats_button" method="_on_ui_change_worker"]
+[connection signal="start_game" from="Control/MainMenu" to="." method="_on_main_menu_start_game"]
+[connection signal="pressed" from="Control/worker_selector/worker_1_button" to="." method="_on_worker_1_button_pressed"]
+[connection signal="pressed" from="Control/worker_selector/worker_2_button" to="." method="_on_worker_2_button_pressed"]
+[connection signal="pressed" from="Control/worker_stats_view/worker_stats_button/HBoxContainer/aspirations_button" to="Control/worker_stats_view/worker_stats_button" method="_on_aspirations_button_pressed"]
+[connection signal="pressed" from="Control/worker_stats_view/worker_stats_button/HBoxContainer/inventory_button" to="Control/worker_stats_view/worker_stats_button" method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="Control/worker_stats_view/worker_stats_button/HBoxContainer/skills_button" to="Control/worker_stats_view/worker_stats_button" method="_on_skills_button_pressed"]
+[connection signal="pressed" from="Control/worker_stats_view/worker_stats_button/HBoxContainer/needs_button" to="Control/worker_stats_view/worker_stats_button" method="_on_needs_button_pressed"]
+[connection signal="pressed" from="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/farm_panel/farm_button" to="." method="_on_farm_button_pressed"]
+[connection signal="pressed" from="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/church_panel/church_button" to="." method="_on_church_button_pressed"]
+[connection signal="pressed" from="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/tabern_panel/tabern_button" to="." method="_on_tabern_button_pressed"]
+[connection signal="pressed" from="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/market_panel/market_button" to="." method="_on_market_button_pressed"]
+[connection signal="pressed" from="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/mill_panel/mill_button" to="." method="_on_mill_button_pressed"]
+[connection signal="pressed" from="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/tower_panel/tower_button" to="." method="_on_tower_button_pressed"]
+[connection signal="pressed" from="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/wood_house_panel/wood_house_button" to="." method="_on_wood_house_button_pressed"]
+[connection signal="pressed" from="Control/bulding_select_control/bulding_select_panel/MarginContainer/HBoxContainer/water_well_panel/water_well_button" to="." method="_on_water_well_button_pressed"]

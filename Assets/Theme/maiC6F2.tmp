@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=3 uid="uid://d30bpi1775qd4"]
+
+[ext_resource type="Theme" uid="uid://dr8inuvdxvt6x" path="res://Assets/Theme/delfault_theme.tres" id="1_cisjk"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="2_sle24"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_cisjk")
+script = ExtResource("2_sle24")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0415512, 0.041558, 0.090217, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Ackerkraft"
+horizontal_alignment = 1
+
+[node name="ButtonVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="StartGameButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonVBox"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+focus_neighbor_top = NodePath("../QuitGameButton")
+focus_neighbor_bottom = NodePath("../SettingGameButton")
+focus_next = NodePath("../SettingGameButton")
+focus_previous = NodePath("../QuitGameButton")
+text = "Start"
+
+[node name="SettingGameButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonVBox"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+focus_neighbor_top = NodePath("../StartGameButton")
+focus_neighbor_bottom = NodePath("../QuitGameButton")
+focus_next = NodePath("../QuitGameButton")
+focus_previous = NodePath("../StartGameButton")
+text = "Setting "
+
+[node name="QuitGameButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonVBox"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+focus_neighbor_top = NodePath("../SettingGameButton")
+focus_neighbor_bottom = NodePath("../StartGameButton")
+focus_next = NodePath("../StartGameButton")
+focus_previous = NodePath("../SettingGameButton")
+text = "Exit"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonVBox/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonVBox/SettingGameButton" to="." method="_on_setting_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonVBox/QuitGameButton" to="." method="_on_quit_game_button_pressed"]

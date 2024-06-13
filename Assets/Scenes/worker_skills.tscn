@@ -1,0 +1,288 @@
+[gd_scene load_steps=3 format=3 uid="uid://co8wxpefywlgw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brnp1"]
+bg_color = Color(0, 0.317647, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3k2ab"]
+bg_color = Color(0, 0.94902, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="woker_skills" type="VBoxContainer"]
+custom_minimum_size = Vector2(218.36, 0)
+
+[node name="skill_container1" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container1"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container1"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container1"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container2" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container2"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container2"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container2"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container3" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container3"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container3"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container3"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container4" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container4"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container4"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container4"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container5" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container5"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container5"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container5"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container6" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container6"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container6"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container6"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container7" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container7"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container7"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container7"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container8" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container8"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container8"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container8"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container9" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container9"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container9"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container9"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2
+
+[node name="skill_container10" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="skill_label" type="Label" parent="skill_container10"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="skill_progress_bar" type="ProgressBar" parent="skill_container10"]
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_brnp1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3k2ab")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="level_abel" type="Label" parent="skill_container10"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 2

@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dr8inuvdxvt6x"]
+
+[ext_resource type="FontFile" uid="uid://dws7oocoo2ldu" path="res://Assets/Fonts/NotoSansBuhid-Regular.ttf" id="1_d4c4k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_85d6o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mlc0b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qntmi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eeq75"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ka1ht"]
+
+[resource]
+default_font = ExtResource("1_d4c4k")
+default_font_size = 22
+Button/colors/font_color = Color(0.882353, 0.882353, 0.882353, 1)
+Button/colors/font_disabled_color = Color(0.898039, 0, 0, 0.501961)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.733333, 0.733333, 0.733333, 1)
+Button/colors/font_pressed_color = Color(0.34902, 0.34902, 0.352941, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_85d6o")
+Button/styles/focus = SubResource("StyleBoxEmpty_mlc0b")
+Button/styles/hover = SubResource("StyleBoxEmpty_qntmi")
+Button/styles/normal = SubResource("StyleBoxEmpty_eeq75")
+Button/styles/pressed = SubResource("StyleBoxEmpty_ka1ht")

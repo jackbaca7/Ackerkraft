@@ -1,0 +1,307 @@
+[gd_scene load_steps=46 format=3 uid="uid://crviw77lc13ib"]
+
+[ext_resource type="Script" path="res://Scripts/NavigationRegion2D.gd" id="1_0jwjs"]
+[ext_resource type="Texture2D" uid="uid://b0g7j52b1k58l" path="res://Assets/Tile/PNG/grass.png" id="2_f6fva"]
+[ext_resource type="Texture2D" uid="uid://xwwafles4e2m" path="res://Assets/Tile/PNG/road 9.png" id="3_4oqpn"]
+[ext_resource type="Texture2D" uid="uid://brrjun6atj8dm" path="res://Assets/Tile/PNG/road 10.png" id="4_jvfiy"]
+[ext_resource type="Texture2D" uid="uid://dve411rbxhnos" path="res://Assets/Tile/PNG/road 11.png" id="5_n0jtv"]
+[ext_resource type="Texture2D" uid="uid://cdubi1p31pujd" path="res://Assets/Tile/PNG/blacksmith.png" id="6_jfie1"]
+[ext_resource type="Texture2D" uid="uid://cuownncid1k0v" path="res://Assets/Tile/PNG/church.png" id="7_26ooa"]
+[ext_resource type="Texture2D" uid="uid://bh8ga2fl6r1ym" path="res://Assets/Tile/PNG/tabern.png" id="8_iktvn"]
+[ext_resource type="Texture2D" uid="uid://4uowl53ylqsq" path="res://Assets/Tile/PNG/tower.png" id="9_cljsu"]
+[ext_resource type="Texture2D" uid="uid://blgq7daq2plho" path="res://Assets/Tile/PNG/water well.png" id="10_f55d8"]
+[ext_resource type="Texture2D" uid="uid://b2dvm5keqhy2c" path="res://Assets/Tile/PNG/wood house.png" id="11_cuapi"]
+[ext_resource type="Texture2D" uid="uid://dtw1xhv3d1pp" path="res://Assets/Tile/PNG/mill.png" id="12_mfc78"]
+[ext_resource type="Texture2D" uid="uid://cgpwhv08nbbl6" path="res://Assets/Tile/PNG/road 1.png" id="13_pjrpl"]
+[ext_resource type="Texture2D" uid="uid://cwh1www6x2fox" path="res://Assets/Tile/PNG/market.png" id="14_mem5k"]
+[ext_resource type="Texture2D" uid="uid://2enkpwcxmtoa" path="res://Assets/Tile/PNG/farm.png" id="15_c2dbo"]
+[ext_resource type="Texture2D" uid="uid://h1qdy0gcg4wr" path="res://Assets/Tile/PNG/road 2.png" id="16_npbxv"]
+[ext_resource type="Texture2D" uid="uid://dfd6ghpv4ew7o" path="res://Assets/Tile/PNG/road 3.png" id="17_e27nq"]
+[ext_resource type="Texture2D" uid="uid://dug545i4f4fvi" path="res://Assets/Tile/PNG/road 4.png" id="18_rpa3i"]
+[ext_resource type="Texture2D" uid="uid://c7f7swgggsskc" path="res://Assets/Tile/PNG/road 5.png" id="19_vfykw"]
+[ext_resource type="Texture2D" uid="uid://bfpva25g7w3vt" path="res://Assets/Tile/PNG/road 6.png" id="20_ja67r"]
+[ext_resource type="Texture2D" uid="uid://bj468xcj7j2kg" path="res://Assets/Tile/PNG/road 7.png" id="21_vvqnn"]
+[ext_resource type="Texture2D" uid="uid://io2xslae5ghb" path="res://Assets/Tile/PNG/road 8.png" id="22_s8hy3"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4hhdn"]
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lteqe"]
+texture = ExtResource("2_f6fva")
+texture_region_size = Vector2i(1016, 610)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cyeyt"]
+texture = ExtResource("3_4oqpn")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/bottom_left_side = 0
+0:0/0/terrains_peering_bit/top_right_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ucpnf"]
+texture = ExtResource("4_jvfiy")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/bottom_left_side = 0
+0:0/0/terrains_peering_bit/top_left_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_be0co"]
+texture = ExtResource("5_n0jtv")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/top_left_side = 0
+0:0/0/terrains_peering_bit/top_right_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0l7nk"]
+texture = ExtResource("6_jfie1")
+texture_region_size = Vector2i(604, 528)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rglc3"]
+texture = ExtResource("7_26ooa")
+texture_region_size = Vector2i(729, 1016)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52tle"]
+texture = ExtResource("8_iktvn")
+texture_region_size = Vector2i(1169, 878)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xq7kb"]
+texture = ExtResource("9_cljsu")
+texture_region_size = Vector2i(414, 632)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oscre"]
+texture = ExtResource("10_f55d8")
+texture_region_size = Vector2i(249, 353)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_earhi"]
+texture = ExtResource("11_cuapi")
+texture_region_size = Vector2i(598, 541)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myd2m"]
+texture = ExtResource("12_mfc78")
+texture_region_size = Vector2i(420, 553)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n4ywv"]
+texture = ExtResource("13_pjrpl")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_left_side = 0
+0:0/0/terrains_peering_bit/top_right_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gf5mb"]
+texture = ExtResource("14_mem5k")
+texture_region_size = Vector2i(893, 541)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpkon"]
+texture = ExtResource("15_c2dbo")
+texture_region_size = Vector2i(907, 771)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_16355"]
+texture = ExtResource("16_npbxv")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/bottom_left_side = 0
+0:0/0/terrains_peering_bit/top_left_side = 0
+0:0/0/terrains_peering_bit/top_right_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fnoir"]
+texture = ExtResource("17_e27nq")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/top_left_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvdy5"]
+texture = ExtResource("18_rpa3i")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/top_right_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ipgv2"]
+texture = ExtResource("19_vfykw")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/top_left_side = 0
+0:0/0/terrains_peering_bit/top_right_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehix3"]
+texture = ExtResource("20_ja67r")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_left_side = 0
+0:0/0/terrains_peering_bit/top_left_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_beqmc"]
+texture = ExtResource("21_vvqnn")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/bottom_left_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rdjto"]
+texture = ExtResource("22_s8hy3")
+texture_region_size = Vector2i(1000, 610)
+0:0/0 = 0
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/terrains_peering_bit/bottom_left_side = 0
+0:0/0/terrains_peering_bit/top_left_side = 0
+0:0/0/terrains_peering_bit/top_right_side = 0
+
+[sub_resource type="TileSet" id="TileSet_cg4ad"]
+tile_shape = 1
+tile_layout = 4
+tile_size = Vector2i(1000, 610)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "fence"
+terrain_set_0/terrain_0/color = Color(1, 0.368627, 0.137255, 1)
+terrain_set_0/terrain_1/name = "Wall"
+terrain_set_0/terrain_1/color = Color(0.611765, 0.00392157, 0.92549, 1)
+terrain_set_1/mode = 0
+terrain_set_1/terrain_0/name = "GroundNEW"
+terrain_set_1/terrain_0/color = Color(0.47451, 0.00392157, 0.894118, 1)
+terrain_set_2/mode = 2
+terrain_set_2/terrain_0/name = "ground"
+terrain_set_2/terrain_0/color = Color(0.521569, 1, 0.443137, 1)
+terrain_set_3/mode = 0
+terrain_set_3/terrain_0/name = "building"
+terrain_set_3/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+navigation_layer_0/layers = 3
+sources/1 = SubResource("TileSetAtlasSource_lteqe")
+sources/2 = SubResource("TileSetAtlasSource_n4ywv")
+sources/3 = SubResource("TileSetAtlasSource_16355")
+sources/4 = SubResource("TileSetAtlasSource_fnoir")
+sources/5 = SubResource("TileSetAtlasSource_pvdy5")
+sources/6 = SubResource("TileSetAtlasSource_ipgv2")
+sources/7 = SubResource("TileSetAtlasSource_ehix3")
+sources/8 = SubResource("TileSetAtlasSource_beqmc")
+sources/9 = SubResource("TileSetAtlasSource_rdjto")
+sources/10 = SubResource("TileSetAtlasSource_cyeyt")
+sources/11 = SubResource("TileSetAtlasSource_ucpnf")
+sources/12 = SubResource("TileSetAtlasSource_be0co")
+sources/13 = SubResource("TileSetAtlasSource_0l7nk")
+sources/14 = SubResource("TileSetAtlasSource_rglc3")
+sources/15 = SubResource("TileSetAtlasSource_52tle")
+sources/16 = SubResource("TileSetAtlasSource_xq7kb")
+sources/17 = SubResource("TileSetAtlasSource_oscre")
+sources/18 = SubResource("TileSetAtlasSource_earhi")
+sources/19 = SubResource("TileSetAtlasSource_myd2m")
+sources/20 = SubResource("TileSetAtlasSource_gf5mb")
+sources/21 = SubResource("TileSetAtlasSource_hpkon")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D"]
+show_behind_parent = true
+navigation_polygon = SubResource("NavigationPolygon_4hhdn")
+navigation_layers = 3
+script = ExtResource("1_0jwjs")
+
+[node name="TileMap" type="TileMap" parent="."]
+unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(1, -20)
+tile_set = SubResource("TileSet_cg4ad")
+rendering_quadrant_size = 32
+format = 2
+layer_0/name = "bulding"
+layer_0/y_sort_enabled = true
+layer_0/z_index = 1
+layer_1/name = "Ground"
+layer_1/y_sort_enabled = true
+layer_1/z_index = -1
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "preview"
+layer_2/y_sort_enabled = true
+layer_2/z_index = 1
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Wall"
+layer_3/y_sort_enabled = true
+layer_3/z_index = 2
+layer_3/tile_data = PackedInt32Array()
+layer_4/name = "Roff"
+layer_4/y_sort_enabled = true
+layer_4/y_sort_origin = 1
+layer_4/z_index = 3
+layer_4/tile_data = PackedInt32Array()

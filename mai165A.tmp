@@ -1,0 +1,407 @@
+[gd_scene load_steps=12 format=3 uid="uid://cckyut1rj4en2"]
+
+[ext_resource type="Texture2D" uid="uid://cvtjd218x7dpb" path="res://Assets/Tile/basic_ground_tiles.png" id="1_dj4xu"]
+[ext_resource type="Script" path="res://Scripts/NavigationRegion2D.gd" id="1_tlx47"]
+[ext_resource type="Texture2D" uid="uid://dmcygt0sspden" path="res://Assets/Tile/house_tiles.png" id="2_atvmq"]
+[ext_resource type="Script" path="res://Scripts/worker.gd" id="3_7fvu8"]
+[ext_resource type="Texture2D" uid="uid://r56njwhrgprq" path="res://Assets/Player.png" id="5_1ip3a"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_dbjcu"]
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqp22"]
+texture = ExtResource("1_dj4xu")
+texture_region_size = Vector2i(128, 128)
+0:0/next_alternative_id = 6
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -31)
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/probability = 0.04
+0:0/5 = 5
+1:0/next_alternative_id = 3
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -31)
+1:0/0/terrain_set = 1
+1:0/0/terrain = 0
+1:0/2 = 2
+2:0/next_alternative_id = 2
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -31)
+2:0/0/terrain_set = 1
+2:0/0/probability = 0.015
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -31)
+3:0/0/terrain_set = 1
+3:0/0/probability = 0.015
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -31)
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, -31)
+1:1/0 = 0
+1:1/0/texture_origin = Vector2i(0, -31)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, -31)
+3:1/0 = 0
+3:1/0/texture_origin = Vector2i(0, -31)
+4:1/0 = 0
+4:1/0/texture_origin = Vector2i(0, -31)
+5:1/0 = 0
+5:1/0/texture_origin = Vector2i(0, -31)
+6:1/0 = 0
+6:1/0/texture_origin = Vector2i(0, -31)
+7:1/0 = 0
+7:1/0/texture_origin = Vector2i(0, -31)
+7:2/0 = 0
+7:2/0/texture_origin = Vector2i(0, -31)
+6:2/0 = 0
+6:2/0/texture_origin = Vector2i(0, -31)
+5:2/0 = 0
+5:2/0/texture_origin = Vector2i(0, -31)
+4:2/0 = 0
+4:2/0/texture_origin = Vector2i(0, -31)
+3:2/0 = 0
+3:2/0/texture_origin = Vector2i(0, -31)
+3:2/0/probability = 0.09
+2:2/0 = 0
+2:2/0/texture_origin = Vector2i(0, -31)
+2:2/0/probability = 0.09
+1:3/0 = 0
+1:3/0/texture_origin = Vector2i(0, -31)
+0:3/0 = 0
+0:3/0/texture_origin = Vector2i(0, -31)
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, -31)
+0:2/0/probability = 0.04
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, -31)
+1:2/0/probability = 0.09
+5:3/0 = 0
+5:3/0/texture_origin = Vector2i(0, -31)
+6:3/0 = 0
+6:3/0/texture_origin = Vector2i(0, -31)
+7:3/0 = 0
+7:3/0/texture_origin = Vector2i(0, -31)
+4:3/0 = 0
+4:3/0/texture_origin = Vector2i(0, -31)
+3:3/0 = 0
+3:3/0/texture_origin = Vector2i(0, -31)
+2:3/0 = 0
+2:3/0/texture_origin = Vector2i(0, -31)
+7:4/0 = 0
+7:4/0/texture_origin = Vector2i(0, -31)
+6:4/0 = 0
+6:4/0/texture_origin = Vector2i(0, -31)
+5:4/0 = 0
+5:4/0/texture_origin = Vector2i(0, -31)
+4:4/0 = 0
+4:4/0/texture_origin = Vector2i(0, -31)
+3:4/0 = 0
+3:4/0/texture_origin = Vector2i(0, -31)
+2:4/0 = 0
+2:4/0/texture_origin = Vector2i(0, -31)
+1:4/0 = 0
+1:4/0/texture_origin = Vector2i(0, -31)
+0:4/0 = 0
+0:4/0/texture_origin = Vector2i(0, -31)
+7:0/0 = 0
+7:0/0/texture_origin = Vector2i(0, -31)
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(0, -31)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, -31)
+0:5/0 = 0
+0:5/0/texture_origin = Vector2i(0, 25)
+0:5/0/terrain_set = 0
+0:5/0/terrain = 0
+0:5/0/probability = 0.3
+0:5/0/terrains_peering_bit/top_left_side = 0
+0:5/0/terrains_peering_bit/top_right_side = 0
+1:5/0 = 0
+1:5/0/texture_origin = Vector2i(0, 25)
+1:5/0/terrain_set = 0
+1:5/0/terrain = 0
+1:5/0/terrains_peering_bit/top_left_side = 0
+1:5/0/terrains_peering_bit/top_right_side = 0
+2:5/0 = 0
+2:5/0/texture_origin = Vector2i(0, 25)
+2:5/0/terrain_set = 0
+2:5/0/probability = 0.3
+2:5/0/terrains_peering_bit/top_left_side = 0
+2:5/0/terrains_peering_bit/top_corner = 0
+2:5/0/terrains_peering_bit/top_right_side = 0
+3:5/0 = 0
+3:5/0/texture_origin = Vector2i(0, 25)
+3:5/0/terrain_set = 0
+3:5/0/terrain = 0
+3:5/0/terrains_peering_bit/bottom_right_side = 0
+3:5/0/terrains_peering_bit/bottom_left_side = 0
+4:5/0 = 0
+4:5/0/texture_origin = Vector2i(0, 25)
+4:5/0/terrain_set = 0
+4:5/0/terrain = 0
+4:5/0/probability = 0.3
+4:5/0/terrains_peering_bit/bottom_left_side = 0
+4:5/0/terrains_peering_bit/top_left_side = 0
+5:5/0 = 0
+5:5/0/texture_origin = Vector2i(0, 25)
+5:5/0/terrain_set = 0
+5:5/0/terrain = 0
+5:5/0/terrains_peering_bit/bottom_left_side = 0
+5:5/0/terrains_peering_bit/top_left_side = 0
+6:5/0 = 0
+6:5/0/texture_origin = Vector2i(0, 25)
+6:5/0/terrain_set = 0
+6:5/0/terrain = 0
+6:5/0/probability = 0.3
+6:5/0/terrains_peering_bit/bottom_right_side = 0
+6:5/0/terrains_peering_bit/top_right_side = 0
+7:5/0 = 0
+7:5/0/texture_origin = Vector2i(0, 25)
+7:5/0/terrain_set = 0
+7:5/0/terrain = 0
+7:5/0/terrains_peering_bit/bottom_right_side = 0
+7:5/0/terrains_peering_bit/top_right_side = 0
+7:6/0 = 0
+7:6/0/texture_origin = Vector2i(0, 25)
+7:6/0/terrain_set = 0
+7:6/0/terrain = 0
+7:6/0/terrains_peering_bit/bottom_left_side = 0
+7:6/0/terrains_peering_bit/top_right_side = 0
+6:6/0 = 0
+6:6/0/texture_origin = Vector2i(0, 25)
+5:6/0 = 0
+5:6/0/texture_origin = Vector2i(0, 25)
+5:6/0/terrain_set = 0
+5:6/0/terrain = 0
+5:6/0/terrains_peering_bit/bottom_right_side = 0
+5:6/0/terrains_peering_bit/top_left_side = 0
+4:6/0 = 0
+4:6/0/texture_origin = Vector2i(0, 25)
+3:6/0 = 0
+3:6/0/texture_origin = Vector2i(0, 25)
+3:6/0/terrain_set = 0
+3:6/0/terrain = 0
+3:6/0/terrains_peering_bit/bottom_left_side = 0
+3:6/0/terrains_peering_bit/top_right_side = 0
+2:6/0 = 0
+2:6/0/texture_origin = Vector2i(0, 25)
+1:6/0 = 0
+1:6/0/texture_origin = Vector2i(0, 25)
+1:6/0/terrain_set = 0
+1:6/0/terrain = 0
+1:6/0/terrains_peering_bit/bottom_right_side = 0
+1:6/0/terrains_peering_bit/top_left_side = 0
+0:6/0 = 0
+0:6/0/texture_origin = Vector2i(0, 25)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wier4"]
+resource_name = "downWall"
+texture = ExtResource("2_atvmq")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 32)
+0:0/0/terrain_set = 2
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/bottom_right_side = 0
+0:0/0/terrains_peering_bit/top_left_side = 0
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 32)
+1:0/0/terrain_set = 2
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/bottom_left_side = 0
+1:0/0/terrains_peering_bit/top_right_side = 0
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, 32)
+2:0/0/terrain_set = 2
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/top_left_side = 0
+2:0/0/terrains_peering_bit/top_corner = 0
+2:0/0/terrains_peering_bit/top_right_side = 0
+1:1/0 = 0
+1:1/0/texture_origin = Vector2i(0, 32)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, 32)
+3:1/0 = 0
+3:1/0/texture_origin = Vector2i(0, 32)
+6:2/0 = 0
+6:2/0/texture_origin = Vector2i(0, 32)
+7:2/0 = 0
+7:2/0/texture_origin = Vector2i(0, 32)
+7:1/0 = 0
+7:1/0/texture_origin = Vector2i(0, 32)
+7:0/0 = 0
+7:0/0/texture_origin = Vector2i(0, 32)
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(0, 32)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, 32)
+5:0/0/terrain_set = 2
+5:0/0/terrain = 0
+5:0/0/terrains_peering_bit/bottom_left_side = 0
+5:0/0/terrains_peering_bit/left_corner = 0
+5:0/0/terrains_peering_bit/top_left_side = 0
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, 32)
+4:0/0/terrain_set = 2
+4:0/0/terrain = 0
+4:0/0/terrains_peering_bit/bottom_right_side = 0
+4:0/0/terrains_peering_bit/bottom_corner = 0
+4:0/0/terrains_peering_bit/bottom_left_side = 0
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, 32)
+3:0/0/terrain_set = 2
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/right_corner = 0
+3:0/0/terrains_peering_bit/bottom_right_side = 0
+3:0/0/terrains_peering_bit/top_right_side = 0
+3:2/0 = 0
+3:2/0/texture_origin = Vector2i(0, 32)
+2:2/0 = 0
+2:2/0/texture_origin = Vector2i(0, 32)
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, 32)
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, 32)
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, 32)
+6:1/0 = 0
+4:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tu8l0"]
+resource_name = "upWall"
+texture = ExtResource("2_atvmq")
+texture_region_size = Vector2i(128, 128)
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, -31)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -31)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -31)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -31)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -31)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -31)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, -31)
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(0, -31)
+7:0/0 = 0
+7:0/0/texture_origin = Vector2i(0, -31)
+7:1/0 = 0
+7:1/0/texture_origin = Vector2i(0, -31)
+6:1/0 = 0
+6:1/0/texture_origin = Vector2i(0, -31)
+3:1/0 = 0
+3:1/0/texture_origin = Vector2i(0, -31)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, -31)
+1:1/0 = 0
+1:1/0/texture_origin = Vector2i(0, -31)
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, -31)
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, -31)
+2:2/0 = 0
+2:2/0/texture_origin = Vector2i(0, -31)
+3:2/0 = 0
+3:2/0/texture_origin = Vector2i(0, -31)
+6:2/0 = 0
+6:2/0/texture_origin = Vector2i(0, -31)
+7:2/0 = 0
+7:2/0/texture_origin = Vector2i(0, -31)
+4:1/0 = 0
+4:1/0/texture_origin = Vector2i(0, -31)
+
+[sub_resource type="TileSet" id="TileSet_70hgm"]
+tile_shape = 1
+tile_layout = 4
+tile_size = Vector2i(128, 64)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "fence"
+terrain_set_0/terrain_0/color = Color(1, 0.368627, 0.137255, 1)
+terrain_set_1/mode = 2
+terrain_set_1/terrain_0/name = "ground"
+terrain_set_1/terrain_0/color = Color(0.521569, 1, 0.443137, 1)
+terrain_set_2/mode = 0
+terrain_set_2/terrain_0/name = "building"
+terrain_set_2/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+navigation_layer_0/layers = 1
+sources/0 = SubResource("TileSetAtlasSource_gqp22")
+sources/1 = SubResource("TileSetAtlasSource_wier4")
+sources/2 = SubResource("TileSetAtlasSource_tu8l0")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyyrr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+show_behind_parent = true
+navigation_polygon = SubResource("NavigationPolygon_dbjcu")
+script = ExtResource("1_tlx47")
+tile_map_size = 12
+
+[node name="TileMap" type="TileMap" parent="NavigationRegion2D"]
+unique_name_in_owner = true
+y_sort_enabled = true
+tile_set = SubResource("TileSet_70hgm")
+rendering_quadrant_size = 32
+format = 2
+layer_0/name = "Ground"
+layer_0/y_sort_enabled = true
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(-131074, 0, 2, -65538, 0, 2, -2, 0, 2, 65534, 0, 2, 131070, 0, 2)
+layer_1/name = "bulding"
+layer_1/y_sort_enabled = true
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "preview"
+layer_2/y_sort_enabled = true
+layer_2/z_index = 2
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Wall"
+layer_3/y_sort_enabled = true
+layer_3/z_index = 3
+layer_3/tile_data = PackedInt32Array()
+layer_4/name = "Roff"
+layer_4/y_sort_enabled = true
+layer_4/y_sort_origin = 1
+layer_4/z_index = 4
+layer_4/tile_data = PackedInt32Array()
+
+[node name="Worker" type="CharacterBody2D" parent="."]
+position = Vector2(372, 320)
+script = ExtResource("3_7fvu8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Worker"]
+position = Vector2(18.25, -14)
+scale = Vector2(1.71569, 1.53846)
+texture = ExtResource("5_1ip3a")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Worker"]
+position = Vector2(19.5, -14)
+shape = SubResource("CircleShape2D_jyyrr")
+metadata/_edit_lock_ = true
+
+[node name="Nav" type="Node2D" parent="Worker"]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Worker/Nav"]
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.25098, 0.313726, 1, 1)
+debug_path_custom_point_size = 11.82
+debug_path_custom_line_width = 7.97
+
+[node name="Timer" type="Timer" parent="Worker/Nav"]
+wait_time = 0.05
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Worker"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.38, 0.38)
+
+[connection signal="timeout" from="Worker/Nav/Timer" to="Worker" method="_on_timer_timeout"]

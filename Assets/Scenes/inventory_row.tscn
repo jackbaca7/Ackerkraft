@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://p008khwokvym"]
+
+[node name="inventory_container1" type="HBoxContainer"]
+clip_contents = true
+layout_direction = 2
+
+[node name="Item_Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 1
+text = "a"
+
+[node name="Amount_Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "aaaa"
+horizontal_alignment = 2

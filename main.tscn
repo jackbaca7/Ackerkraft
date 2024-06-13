@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkfo1fuaw3w8s"]
+
+[ext_resource type="Script" path="res://Scripts/worker.gd" id="3_7fvu8"]
+[ext_resource type="Texture2D" uid="uid://r56njwhrgprq" path="res://Assets/Player.png" id="5_1ip3a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ckkb"]
+radius = 43.1202
+
+[node name="Worker" type="CharacterBody2D"]
+z_index = 7
+y_sort_enabled = true
+position = Vector2(385, 320)
+scale = Vector2(3.35467, 2.96)
+collision_layer = 2
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("3_7fvu8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(18.25, -14)
+scale = Vector2(1.71569, 1.53846)
+texture = ExtResource("5_1ip3a")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(19.5, -14)
+shape = SubResource("CircleShape2D_7ckkb")
+metadata/_edit_lock_ = true
+
+[node name="Nav2" type="Node2D" parent="."]
+position = Vector2(18.6975, -11.1905)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Nav2"]
+navigation_layers = 2
+path_postprocessing = 1
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.25098, 0.313726, 1, 1)
+debug_path_custom_point_size = 11.82
+debug_path_custom_line_width = 7.97
+
+[node name="Timer" type="Timer" parent="Nav2"]
+wait_time = 0.05
+autostart = true
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]

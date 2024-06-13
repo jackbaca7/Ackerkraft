@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://cckyut1rj4en2"]
+
+[ext_resource type="PackedScene" uid="uid://c0asg8cpmh7ve" path="res://Assets/Scenes/ui.tscn" id="1_truts"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_uigok"]
+[ext_resource type="PackedScene" uid="uid://crviw77lc13ib" path="res://Assets/Scenes/map.tscn" id="2_81b75"]
+[ext_resource type="PackedScene" uid="uid://1rm887eeqq68" path="res://Assets/Scenes/worker.tscn" id="3_8ltl0"]
+[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="4_am4a2"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_uigok")
+WorldScene = ExtResource("2_81b75")
+WorkerScene = ExtResource("3_8ltl0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+zoom = Vector2(0.1, 0.1)
+script = ExtResource("4_am4a2")
+mouseMoveAmount = Vector2(0, 0)
+joystickMoveAmount = Vector2(0, 0)
+mouse_sensitivity = 13
+zoom_sensitivity = 3.1
+
+[node name="UI" parent="." instance=ExtResource("1_truts")]
+layer = 0
+
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="property_list_changed" from="Camera2D" to="Camera2D" method="_on_property_list_changed"]
+[connection signal="start_game" from="UI" to="." method="_on_ui_start_game"]

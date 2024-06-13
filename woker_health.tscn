@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw126k5pste8m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2f4w"]
+bg_color = Color(0, 0.317647, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txetk"]
+bg_color = Color(0, 0.94902, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="woker_healthins" type="VBoxContainer"]
+offset_right = 219.0
+offset_bottom = 172.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 2
+
+[node name="hunger_label" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Hunger"
+vertical_alignment = 2
+
+[node name="hunger_progress_bar" type="ProgressBar" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_t2f4w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_txetk")
+step = 1.0
+value = 97.0
+show_percentage = false
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Sleep"
+
+[node name="sleep_progress_bar" type="ProgressBar" parent="HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_t2f4w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_txetk")
+step = 1.0
+value = 82.0
+show_percentage = false
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Fun"
+
+[node name="fun_progress_bar" type="ProgressBar" parent="HBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_t2f4w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_txetk")
+step = 1.0
+value = 82.0
+show_percentage = false
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer4"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Social"
+
+[node name="social_progress_bar" type="ProgressBar" parent="HBoxContainer4"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(105.375, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+theme_override_styles/background = SubResource("StyleBoxFlat_t2f4w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_txetk")
+step = 1.0
+value = 82.0
+show_percentage = false
